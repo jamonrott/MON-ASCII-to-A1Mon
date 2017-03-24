@@ -1,0 +1,414 @@
+<html>
+<head>
+    <title>MON-2-A1Mon Converter</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="shortcut icon" href="favicon.ico" >
+<style type="text/css">
+<!--
+body {
+	background-image: url(bgpic.jpg);
+	background-repeat: repeat;
+}
+-->
+</style></head>
+<body bgcolor="#DAEFF7" bgproperties="vertical">
+<div>
+    <table width="75%" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tr>
+                    <td width="473" height="30"><h2><font color=green>MON To A1Mon Converter</font></h2></td>
+      				</tr>
+                    <tr>
+                        <td width="473">
+                            <br>Type the words here:</br>
+                            <textarea name="txtInput" cols="55" rows="7" id="txtInput" style="font-family:MON;font-size:19px;"></textarea></td>
+					
+                        <td width="428">
+                            <br>Works in Firefox on the fly, Please type slowly:</br>
+                            <textarea cols="36" rows="5" id="txtInput2" style="font-family:A1Mon;font-size:20px;" onKeyPress="ConvertToUni(this,event)" onKeyUp="AssignText(event)"></textarea>
+                        </td>
+                    </tr>
+                        <td width="471">Click to convert
+                          <input type="button" onClick="ConvertToUnicode()"; value="Convert" />
+                        </td>
+                    <tr>
+                        <td>
+                            <textarea cols="49" rows="6" id="txtResult" style="font-family:A1Mon;font-size:20px;"></textarea>
+                      </td>
+                    </tr>
+					<tr><td width="400" height="30"><font size=2>Created by JaMonRott</font></td></tr>
+  </table>
+</div>
+<script language="javascript" type="text/javascript">
+	var unichar = "";
+    var unichar2 = "";
+    var backspace = 0;
+    var txt = document.getElementById("txtInput2");
+    var str = txt.value;
+    var keycode;
+    function ConvertToUni(sender, e)
+    {
+        backspace = 0;
+        //////
+        if(txt.value.length == 0)
+        {
+           unichar2 = "";
+        }
+        //////
+        if(e.keyCode)
+            keycode = e.keyCode;
+        else
+            keycode = e.which;
+        //////////
+        if(e.keyCode == 8)
+        {
+            backspace = 1;
+        }
+        switch(keycode) 
+        {
+		    	case 213 : keycode = 88; unichar += String.fromCharCode(243); break;
+		    	case 33 : keycode = 36; break;
+			case 34 : keycode = 77; break;		
+			case 36 : keycode = 79; break;		
+			case 38 : keycode = 82; break;
+			case 39 : keycode = 78; break;
+			case 42 : keycode = 103; break;
+			case 43 : keycode = 161; break;
+			case 44 : keycode = 121; break;
+			case 46 : keycode = 122; break;
+			case 47 : keycode = 96; break;
+			case 48 : keycode = 48; break;
+			case 49 : keycode = 49; break;
+			case 50 : keycode = 50; break;
+			case 51 : keycode = 51; break;
+			case 52 : keycode = 52; break;
+			case 53 : keycode = 53; break;
+			case 54 : keycode = 54; break;
+			case 55 : keycode = 114; break;
+			case 56 : keycode = 56; break;
+			case 57 : keycode = 57; break;
+			case 58 : keycode = 227; break;
+			case 59 : keycode = 44; break;
+			case 60 : keycode = 175; break;
+			case 61 : keycode = 100; break;
+			case 62 : keycode = 90; break;
+			case 63 : keycode = 226; break;
+			case 64 : keycode = 64; break;
+			case 65 : keycode = 98; break;
+			case 66 : keycode = 93; break;
+			case 67 : keycode = 71; break;
+			case 68 : keycode = 74; break;
+			case 69 : keycode = 215; break;
+			case 70 : keycode = 73; break;
+			case 71 : keycode = 87; break;
+			case 72 : keycode = 183; break;
+			case 73 : keycode = 224; break;
+			case 74 : keycode = 89; break;
+			case 75 : keycode = 213; break;
+			case 76 : keycode = 234; break;
+			case 77 : keycode = 76; break;
+			case 78 : keycode = 236; break;
+			case 79 : keycode = 120; break;
+			case 80 : keycode = 203; break;
+			case 81 : keycode = 201; break;
+			case 82 : keycode = 63; break;
+			case 83 : keycode = 72; break;
+			case 84 : keycode = 69; break;
+			case 85 : keycode = 210; break;
+			case 86 : keycode = 200; break;
+			case 87 : keycode = 208; break;
+			case 88 : keycode = 184; break;
+			case 89 : keycode = 80; break;			
+			case 90 : keycode = 67; break;
+			case 91 : keycode = 104; break;
+			case 92 : keycode = 47; break;
+			case 93 : keycode = 68; break;
+			case 94 : keycode = 218; break;
+			case 96 : keycode = 59; break;
+			case 97 : keycode = 101; break;
+			case 98 : keycode = 66; break;
+			case 99 : keycode = 75; break;
+			case 100 : keycode = 105; break;
+			case 101 : keycode = 110; break;
+			case 102 : keycode = 106; break;
+			case 103 : keycode = 62; break;
+			case 104 : keycode = 173; break;
+			case 105 : keycode = 99; break;
+			case 106 : keycode = 111; break;
+			case 107 : keycode = 117; break;
+			case 108 : keycode = 85; break;
+			case 109 : keycode = 46; break;
+			case 110 : keycode = 118; break;
+			case 111 : keycode = 113; break;
+			case 112 : keycode = 115; break;
+			case 113 : keycode = 83; break;
+			case 114 : keycode = 109; break;
+			case 115 : keycode = 91; break;
+			case 116 : keycode = 97; break;
+			case 117 : keycode = 107; break;
+			case 118 : keycode = 108; break;
+			case 119 : keycode = 116; break;
+			case 120 : keycode = 84; break;
+			case 121 : keycode = 112; break;
+			case 122 : keycode = 102; break;
+			case 123 : keycode = 191; break;
+			case 124 : keycode = 189; break;
+			case 125 : keycode = 45; break;
+			case 126 : keycode = 58; break;
+			case 164 : keycode = 35; break;
+			case 169 : keycode = 125; break;
+			case 170 : keycode = 124; break;
+			case 171 : keycode = 206; break;
+			case 177 : keycode = 243; break;
+			case 180 : keycode = 55; break;
+			case 181 : keycode = 167; break;
+			case 187 : keycode = 131; break;
+			case 188 : keycode = 171; break;
+			case 189 : keycode = 229; break;
+			case 192 : keycode = 202; break;
+			case 199 : keycode = 70; break;
+			case 200 : keycode = 212; break;
+			case 204 : keycode = 81; break;
+			case 218 : keycode = 182; break;
+			case 220 : keycode = 187; break;
+			case 223 : keycode = 193; break;
+			case 224 : keycode = 235; break;
+			case 225 : keycode = 225; break;
+			case 226 : keycode = 195; break;
+			case 227 : keycode = 232; break;
+			case 228 : keycode = 169; break;
+			case 229 : keycode = 193; break;
+			case 230 : keycode = 245; unichar += String.fromCharCode(245); break;
+			case 232 : keycode = 60; break;
+			case 235 : keycode = 252; break;
+			case 237 : keycode = 245; break;
+			case 208 : keycode = 170; break;
+			case 239 : keycode = 249; break;
+			case 240 : keycode = 162; break;
+			case 241 : keycode = 38; break;
+			case 242 : keycode = 37; break;
+			case 243 : keycode = 205; break;
+			case 244 : keycode = 198; break;
+			case 246 : keycode = 39; break;
+			case 247 : keycode = 95; break;
+			case 249 : keycode = 223; break;
+			case 251 : keycode = 252; unichar += String.fromCharCode(252); break;
+			case 255 : keycode = 34; break;
+			case 35 : keycode = 192; break;			
+			case 37 : keycode = 33; break;			
+			case 40 : keycode = 40; break;
+			case 41 : keycode = 41; break;
+			case 45 : keycode = 188; break;
+			case 95 : keycode = 65; break;
+			case 161 : keycode = 242; break;
+			case 163 : keycode = 42; break;
+			case 176 : keycode = 116; unichar += String.fromCharCode(220); break;
+			case 183 : keycode = 206; break;
+			case 184 : keycode = 194; unichar += String.fromCharCode(215); break;
+			case 201 : keycode = 103; unichar += String.fromCharCode(172); break;
+			case 211 : keycode = 215; unichar += String.fromCharCode(220); break;
+			case 212 : keycode = 36; unichar += String.fromCharCode(241); break;
+			case 233 : keycode = 179; break;		
+        }
+        ////
+        if(backspace == 1)
+        {
+            unichar2 = unichar2.substring(0, unichar2.length-1);
+        }
+        ////
+        if(e.keyCode)
+        {
+            e.keyCode = keycode;
+            unichar2 += String.fromCharCode(e.keyCode);
+        }
+        else
+        {
+            unichar2 = String.fromCharCode(keycode);
+            insertAtCursor(unichar2);
+        }
+    }
+    
+    function AssignText(e)
+    {
+        if(e.which)
+        {
+            if(backspace == 0)
+            {
+                if(!(e.keyCode >=0 && e.keyCode <=40))
+                {
+                    txt.value = txt.value.substring(txt.value.length - 1, 0);
+                }
+            }
+        }
+    }
+    
+    function insertAtCursor(myValue) {
+        if (txt.selectionStart || txt.selectionStart == '0') {
+		    var startPos = txt.selectionStart;
+		    var endPos = txt.selectionEnd;
+		    txt.value = txt.value.substring(0, startPos)
+			    + myValue
+			    + txt.value.substring(endPos, txt.value.length);
+	    } else {
+		    txt.value += myValue;
+	    }
+    }
+	/*developed by jamonrott*/
+        function ConvertToUnicode()
+        {
+            for(var i = 0; i <= document.getElementById("txtInput").value.length-1; i++)
+            {
+                keycode = document.getElementById("txtInput").value.charCodeAt(i);
+                switch(keycode)
+                {
+		        	case 213 : keycode = 88; unichar += String.fromCharCode(243); break;
+		    	case 33 : keycode = 36; break;
+			case 34 : keycode = 77; break;		
+			case 36 : keycode = 79; break;		
+			case 38 : keycode = 82; break;
+			case 39 : keycode = 78; break;
+			case 42 : keycode = 103; break;
+			case 43 : keycode = 161; break;
+			case 44 : keycode = 121; break;
+			case 46 : keycode = 122; break;
+			case 47 : keycode = 96; break;
+			case 48 : keycode = 48; break;
+			case 49 : keycode = 49; break;
+			case 50 : keycode = 50; break;
+			case 51 : keycode = 51; break;
+			case 52 : keycode = 52; break;
+			case 53 : keycode = 53; break;
+			case 54 : keycode = 54; break;
+			case 55 : keycode = 114; break;
+			case 56 : keycode = 56; break;
+			case 57 : keycode = 57; break;
+			case 58 : keycode = 227; break;
+			case 59 : keycode = 44; break;
+			case 60 : keycode = 175; break;
+			case 61 : keycode = 100; break;
+			case 62 : keycode = 90; break;
+			case 63 : keycode = 226; break;
+			case 64 : keycode = 64; break;
+			case 65 : keycode = 98; break;
+			case 66 : keycode = 93; break;
+			case 67 : keycode = 71; break;
+			case 68 : keycode = 74; break;
+			case 69 : keycode = 215; break;
+			case 70 : keycode = 73; break;
+			case 71 : keycode = 87; break;
+			case 72 : keycode = 183; break;
+			case 73 : keycode = 224; break;
+			case 74 : keycode = 89; break;
+			case 75 : keycode = 213; break;
+			case 76 : keycode = 234; break;
+			case 77 : keycode = 76; break;
+			case 78 : keycode = 236; break;
+			case 79 : keycode = 120; break;
+			case 80 : keycode = 203; break;
+			case 81 : keycode = 201; break;
+			case 82 : keycode = 63; break;
+			case 83 : keycode = 72; break;
+			case 84 : keycode = 69; break;
+			case 85 : keycode = 210; break;
+			case 86 : keycode = 200; break;
+			case 87 : keycode = 208; break;
+			case 88 : keycode = 184; break;
+			case 89 : keycode = 80; break;			
+			case 90 : keycode = 67; break;
+			case 91 : keycode = 104; break;
+			case 92 : keycode = 47; break;
+			case 93 : keycode = 68; break;
+			case 94 : keycode = 218; break;
+			case 96 : keycode = 59; break;
+			case 97 : keycode = 101; break;
+			case 98 : keycode = 66; break;
+			case 99 : keycode = 75; break;
+			case 100 : keycode = 105; break;
+			case 101 : keycode = 110; break;
+			case 102 : keycode = 106; break;
+			case 103 : keycode = 62; break;
+			case 104 : keycode = 173; break;
+			case 105 : keycode = 99; break;
+			case 106 : keycode = 111; break;
+			case 107 : keycode = 117; break;
+			case 108 : keycode = 85; break;
+			case 109 : keycode = 46; break;
+			case 110 : keycode = 118; break;
+			case 111 : keycode = 113; break;
+			case 112 : keycode = 115; break;
+			case 113 : keycode = 83; break;
+			case 114 : keycode = 109; break;
+			case 115 : keycode = 91; break;
+			case 116 : keycode = 97; break;
+			case 117 : keycode = 107; break;
+			case 118 : keycode = 108; break;
+			case 119 : keycode = 116; break;
+			case 120 : keycode = 84; break;
+			case 121 : keycode = 112; break;
+			case 122 : keycode = 102; break;
+			case 123 : keycode = 191; break;
+			case 124 : keycode = 189; break;
+			case 125 : keycode = 45; break;
+			case 126 : keycode = 58; break;
+			case 164 : keycode = 35; break;
+			case 169 : keycode = 125; break;
+			case 170 : keycode = 124; break;
+			case 171 : keycode = 206; break;
+			case 177 : keycode = 243; break;
+			case 180 : keycode = 55; break;
+			case 181 : keycode = 167; break;
+			case 187 : keycode = 131; break;
+			case 188 : keycode = 171; break;
+			case 189 : keycode = 229; break;
+			case 192 : keycode = 202; break;
+			case 199 : keycode = 70; break;
+			case 200 : keycode = 212; break;
+			case 204 : keycode = 81; break;
+			case 218 : keycode = 182; break;
+			case 220 : keycode = 187; break;
+			case 223 : keycode = 193; break;
+			case 224 : keycode = 235; break;
+			case 225 : keycode = 225; break;
+			case 226 : keycode = 195; break;
+			case 227 : keycode = 232; break;
+			case 228 : keycode = 169; break;
+			case 229 : keycode = 193; break;
+			case 230 : keycode = 245; unichar += String.fromCharCode(245); break;
+			case 232 : keycode = 60; break;
+			case 235 : keycode = 252; break;
+			case 237 : keycode = 245; break;
+			case 208 : keycode = 170; break;
+			case 239 : keycode = 249; break;
+			case 240 : keycode = 162; break;
+			case 241 : keycode = 38; break;
+			case 242 : keycode = 37; break;
+			case 243 : keycode = 205; break;
+			case 244 : keycode = 198; break;
+			case 246 : keycode = 39; break;
+			case 247 : keycode = 95; break;
+			case 249 : keycode = 223; break;
+			case 251 : keycode = 252; unichar += String.fromCharCode(252); break;
+			case 255 : keycode = 34; break;
+			case 35 : keycode = 192; break;			
+			case 37 : keycode = 33; break;			
+			case 40 : keycode = 40; break;
+			case 41 : keycode = 41; break;
+			case 45 : keycode = 188; break;
+			case 95 : keycode = 65; break;
+			case 161 : keycode = 242; break;
+			case 163 : keycode = 42; break;
+			case 176 : keycode = 116; unichar += String.fromCharCode(220); break;
+			case 183 : keycode = 206; break;
+			case 184 : keycode = 194; unichar += String.fromCharCode(215); break;
+			case 201 : keycode = 103; unichar += String.fromCharCode(172); break;
+			case 211 : keycode = 215; unichar += String.fromCharCode(220); break;
+			case 212 : keycode = 36; unichar += String.fromCharCode(241); break;
+			case 233 : keycode = 179; break;		
+                }
+                unichar += String.fromCharCode(keycode);
+            }
+            document.getElementById("txtResult").value = unichar;            
+            unichar = "";
+        }
+</script>		
+</body>
+</html>
